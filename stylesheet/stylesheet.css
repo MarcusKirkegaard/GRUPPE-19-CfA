@@ -206,13 +206,12 @@ nav {
 	border-radius: 20px;
 }
 .main {
-	display: block;
 	border-style: solid;
 	border-width: 1em;
 	border-color: #f0f0f0;
 }
 .main-nav-emne1 {
-	padding: 2em;
+	padding-top: 1em;
 	color: var(--emne1);
 }
 .main-nav-emne2 {
@@ -227,27 +226,41 @@ nav {
 	padding: 2em;
 	color: var(--emne4);
 }
-.main-nav-emne1 li, .main-nav-emne2 li, .main-nav-emne3 li, .main-nav-emne4 li {
-	padding: 0.5em;
+
+.main-nav-emne1 nav,
+.main-nav-emne2 nav,
+.main-nav-emne3 nav,
+.main-nav-emne4 nav{
+	display: flex;
+	flex-direction: column;
 }
-.main-nav-emne1 li a:hover {
+.main-nav-emne1 nav a, .main-nav-emne2 nav a, .main-nav-emne3 nav a, .main-nav-emne4 nav a {
+	padding: 0.2em;
+}
+.main-nav-emne1 nav a:hover {
 	color: var(--emne1);
 }
-.main-nav-emne2 li a:hover {
+.main-nav-emne2 nav a:hover {
 	color: var(--emne2);
 }
-.main-nav-emne3 li a:hover {
+.main-nav-emne3 nav a:hover {
 	color: var(--emne3);
 }
-.main-nav-emne4 li a:hover {
+.main-nav-emne4 nav a:hover {
 	color: var(--emne4);
 }
-.main-nav-emne1 .active:hover {
+.main-nav-emne1 .active:hover,
+.main-nav-emne2 .active:hover,
+.main-nav-emne3 .active:hover,
+.main-nav-emne4 .active:hover{
 	color: black;
 }
+
 .main-nav-emne1 .active {
-	color: var(--emne1);
-	font-size: 1.5em;
+	color: white;
+	font-size: 1.2em;
+	background-color: var(--emne1);
+	padding: 0.2em;
 }
 .main-nav-emne2 .active {
 	color: var(--emne2);
@@ -262,24 +275,24 @@ nav {
 	font-size: 1.5em;
 }
 .main-nav-emne1 ul{
-	list-style-type: square;
 	color: var(--emne1);
+	list-style: none;
 }
 .main-nav-emne2 ul{
-	list-style-type: square;
 	color: var(--emne2);
+	list-style: none;
 }
 .main-nav-emne3 ul{
-	list-style-type: square;
 	color: var(--emne3);
+	list-style: none;
 }
 .main-nav-emne4 ul{
-	list-style-type: square;
 	color: var(--emne4);
+	list-style: none;
 }
 
 #bold {
-	font-style: italic;
+	font-style: bold;
 }
 
 .main-article {
@@ -387,13 +400,10 @@ footer {
  grid-column-gap: 1em;
 }
  .main-nav-emne1, .main-nav-emne2, .main-nav-emne3, .main-nav-emne4 {
- grid-column-start: 0;
- grid-column-end: 1;
- padding: 2em;
+ grid-column: 1;
 }
 .main-article {
- grid-column-start: 1;
- grid-column-end: 3;
+ grid-column: 2;
  padding: 2em;
 }
 }

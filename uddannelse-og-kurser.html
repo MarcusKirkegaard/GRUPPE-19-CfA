@@ -41,6 +41,10 @@
 			</header>
 			<main>
 				<section class="main"> <!-- Kontainer for hovedartikel og tilhørende navbar -->
+					<nav id="mobil-menu"> <!-- knap der viser/gemmer undermenupunkter og knap der går til forside -->
+						<a id="emner"><img id="burger" src="img/menu.png" alt="Burger menu ikon">Vis alle emner</a>
+						<a id="forside" href="index.html">Forside</a>
+					</nav>
 					<article class="main-nav-emne1"> <!-- Vertikal navbar i venstre side -->
 						<nav>
 							<a href="uddannelse-og-kurser/ungdomsuddannelse.html" class="active">Ungdomsuddannelse (STU) ⯆</a>
@@ -143,6 +147,17 @@
 					<a href="https://www.instagram.com/"><img src="img/instagram.png" alt="some"></a> 
 				</aside>
 			</footer>
-		</div> <!-- Slut på wrapper --> 
+		</div> <!-- Slut på wrapper -->
+	<!-- scripts are placed before the </body>-tag -->
+    <!-- first we load the jQuery library from Googles hosted libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- for working offline / fallback to the same, selfhosted jQuery library (downloaded from http://jquery.com/)  -->
+    <script>
+      window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');
+    </script>
+
+    <!-- now we can write jQuery or JavaScript in our own files -->
+    <script src="js/main.js"></script>
 	</body>
 </html>

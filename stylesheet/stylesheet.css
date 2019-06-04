@@ -12,6 +12,7 @@
  --emne2: #547dbd;
  --emne3: #66b230;
  --emne4: #e32626;
+ --emne5: #F1E35F;
  --footer: #9c9c9c;
  --footer-text: black;
  --boxes-title: #F1E35F;
@@ -22,27 +23,30 @@
  --alle-emner: #f0f0f0;
  --wrapper: #f0f0f0;
 }
-/*  --emne1: #66b230;
-    --emne2: #547dbd;
-	--emne3: #e32626;
-	--emne4: #f5994a;
-*/
+
 @font-face {
 	src: url(../fonts/PFDinDisplayPro-Regular_35382.ttf);
 	Font-family: DinDisplay;
+}
+@font-face {
+	src: url(../fonts/PFDinDisplayPro-Bold_35373.ttf);
+	Font-family: DinDisplayBold;
 }
 body {
 	font-size: 1em;
 	font-family: DinDisplay;
 	background-color: var(--body);
 }
+
 /* wrapper */
-.wrapper {
+.wrapper {                                 
 	width: 100%;
 	margin: auto;
 	align-items: center;
 	padding: 0em;
 }
+
+/* links */
 a {
 	text-decoration: none;
 	color: var(--link);
@@ -50,6 +54,12 @@ a {
 a:hover {
 	color: var(--link-hover);
 }
+/* h1 overskrifter */
+h1 {
+	font-size: 1.5em;
+}
+
+/* knapper */
 .button {
 	background-color: var(--button);
 	padding: 1em;
@@ -62,12 +72,15 @@ a:hover {
 img {
 	max-width: 100%;
 }
+
+/* lokal nav på undersider */
 nav {
-	padding-left: 2em;
-	padding-right: 2em;
+	padding-left: 1em;
+	padding-right: 1em;
 	padding-bottom: 1em;
 	background-color: white;
 }
+/* viser kun mobilversion af top nav */
 #nav-desktop {
 	display: none;
 }
@@ -76,28 +89,44 @@ nav {
 	background-color: var(--body);
 	justify-content: center;
 }
+
+/* sætter størrelse på top nav ikoner */
 #logo-mobile img, #logo-desktop img {
-	width: 164px;
-	height: 84px;
+	width: auto;
+	height: 100px;
 }
 #logo-mobile {
 	display: flex;
 	justify-content: center;
 }
+
+/* om-os og nyheder */
 .navbutton-nyheder, .navbutton-kontakt {
 	margin-top: 1.2em;
+	font-size: 2em;
 }
+
+/* sætter størrelse på søg ikon */
 .navbutton-soeg {
-	width: 1%;
+	width: 5em;
 }
+
+/* om-os, nyheder og søgefunktion */
 .navbutton-nyheder, .navbutton-kontakt, .navbutton-soeg {
 	max-width: 4em;
 	min-width: 3em;
 	padding: 1em;
 }
+
+.navbutton-nyheder, .navbutton-kontakt {
+	margin-top: -0.1em;
+}
+/* hovereffekt på top nav ikoner */
 .navbutton-nyheder:hover, .navbutton-kontakt:hover, .navbutton-soeg:hover {
 	opacity: 0.5;
 }
+
+/* call to action billede 1 og 2*/
 .cover1 {
 	background-image: url(../img/cover.jpg);
 	background-repeat: no-repeat;
@@ -106,13 +135,15 @@ nav {
 	background-position: top left;
 }
 .cover2 {
-	background-image: url(../img/farveblyanter.jpg);
+	background-image: url(../img/notebook.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 50vh;
 	background-position: center left;
 	margin-top: 1em;
 }
+
+/* call to action tekst placering */
 .cover1 article {
 	margin-left: 50%;
 	padding-top: 2em;
@@ -124,17 +155,27 @@ nav {
 	padding-right: 0.5em;
 }
 
-.velkommen h1{
+/* call to action overskrifter */
+.velkommen h1, .velkommen h3 {
 	text-align: center;
 }
+
+/* velkomst boks/artikel på forsiden */
 .velkommen {
 	padding: 2em;
 	border-style: solid;
-	border-color: var(--main);
+	border-color: var(--nav);
 	border-width: 1em;
+	margin-top: 1em;
+}
+
+/* om-os side */
+.om-os {
+	display: grid;
+	grid-template-columns: 1fr;
 }
 /*knapper til at vise/gemme undermenuer*/
-#mobil-menu-emne1, #mobil-menu-emne2, #mobil-menu-emne3, #mobil-menu-emne4  {
+#mobil-menu-emne1, #mobil-menu-emne2, #mobil-menu-emne3, #mobil-menu-emne4, #mobil-menu-emne5 {
 	display: flex;
 	flex-wrap: nowrap;
 	flex-direction: row;
@@ -142,7 +183,6 @@ nav {
 	justify-content: space-between;
 	cursor: pointer;
 }
-
 #mobil-menu-emne1 {
 	background-color: var(--emne1);
 }
@@ -155,6 +195,9 @@ nav {
 #mobil-menu-emne4 {
 	background-color: var(--emne4);
 }
+#mobil-menu-emne5 {
+	background-color: var(--emne5);
+}
 #burger {
 	height: auto;
 	width: 40px;
@@ -163,7 +206,7 @@ nav {
 }
 #emner h3 {
 	margin-top: -1.8em;
-	margin-left: 4em;
+	margin-left: 3em;
 	color: black;
 }
 #forside h3 {
@@ -173,13 +216,21 @@ nav {
 #forside h3:hover {
 	color: white;
 }
-/*boxes container*/
-.boxes, .boxes-index, .boxes-emne1, .boxes-emne2, .boxes-emne3, .boxes-emne4 {
+#emner h3:hover {
+	color: white;
+}
+/*boxes container - de fire hovedemner*/
+.boxes, .boxes-index {
 	display: grid;
 	grid-template-columns: auto;
 }
 
-/* titles on boxes*/
+/* skjuler de fire hovedemner ved mobilvisning */
+.boxes-emne1, .boxes-emne2, .boxes-emne3, .boxes-emne4, .boxes-emne5 {
+	display: none;
+}
+
+/* titler på boxes - de fire hovedemner */
 .title-emne {
 	padding: 1em;
 	text-align: center;
@@ -191,6 +242,8 @@ nav {
 	border-style: solid;
 	border-width: 1px;
 }
+
+/* boxes farver - de fire hovedemner */
 .boxes-emne1 .title-emne {
 	background-color: var(--emne1);
 }
@@ -203,19 +256,27 @@ nav {
 .boxes-emne4 .title-emne {
 	background-color: var(--emne4);
 }
-/* colors on box titles (hvid tekst)*/
+.boxes-emne5 .title-emne {
+	background-color: var(--emne5);
+}
+
+/* farve på skriften - ved overemner */
 .title-emne:hover, #active {
 	color: white;
 }
-.broedkrumme-emne1 a, .broedkrumme-emne2 a, .broedkrumme-emne3 a, .broedkrumme-emne4 a {
+
+/* brødkrumme */
+.broedkrumme-emne1 a, .broedkrumme-emne2 a, .broedkrumme-emne3 a, .broedkrumme-emne4 a, .broedkrumme-emne5 a {
 	padding-left: 1em;
 	padding-right: 1em;
 }
-.broedkrumme-emne1, .broedkrumme-emne2, .broedkrumme-emne3, .broedkrumme-emne4 {
+.broedkrumme-emne1, .broedkrumme-emne2, .broedkrumme-emne3, .broedkrumme-emne4, .broedkrumme-emne5 {
 	padding: 1em;
 	margin-top: -1em;
 	display: none;
 }
+
+/* brødkrumme - farve på hovereffekter */
 .broedkrumme-emne1 a:hover {
 	color: var(--emne1);
 }
@@ -228,6 +289,11 @@ nav {
 .broedkrumme-emne4 a:hover {
 	color: var(--emne4);
 }
+.broedkrumme-emne5 a:hover {
+	color: var(--emne5);
+}
+
+/* mest søgte */
 .mest-soegte {
 	background-color: var(--nav);
 	padding: 1em;
@@ -247,6 +313,8 @@ nav {
 	border-color: var(--nav);
 	border-radius: 20px;
 }
+
+/* hovedsektion - artikel og lokal nav */
 .main {
 	border-style: solid;
 	border-width: 1em;
@@ -272,16 +340,33 @@ nav {
 	color: var(--emne4);
 	display: none;
 }
-.main-nav-emne1 nav, .main-nav-emne2 nav, .main-nav-emne3 nav, .main-nav-emne4 nav {
+.main-nav-emne5 {
+	padding-top: 1em;
+	color: var(--emne5);
+	display: none;
+}
+
+/* lokal nav - størrelse på underpunkter*/
+.main-nav-emne1 li a,
+.main-nav-emne2 li a,
+.main-nav-emne3 li a,
+.main-nav-emne4 li a,
+.main-nav-emne5 li a{
+	padding: 0em;
+	font-size: 1.2em;
+}
+/* lokal nav */
+.main-nav-emne1 nav, .main-nav-emne2 nav, .main-nav-emne3 nav, .main-nav-emne4 nav, .main-nav-emne5 nav {
 	display: flex;
 	flex-direction: column;
 }
-.main-nav-emne1 nav li a, .main-nav-emne2 nav a, .main-nav-emne3 nav a, .main-nav-emne4 nav a {
 
-}
-.main-nav-emne1 img, .main-nav-emne2 img, .main-nav-emne3 img, .main-nav-emne4 img {
+/* skjuler billede under lokal nav ved mobilvisning */
+.main-nav-emne1 img, .main-nav-emne2 img, .main-nav-emne3 img, .main-nav-emne4 img, .main-nav-emne5 img {
 	display: none;
 }
+
+/* farver på hovereffekter */
 .main-nav-emne1 nav a:hover {
 	color: var(--emne1);
 }
@@ -294,9 +379,16 @@ nav {
 .main-nav-emne4 nav a:hover {
 	color: var(--emne4);
 }
-.main-nav-emne1 .active:hover, .main-nav-emne2 .active:hover, .main-nav-emne3 .active:hover, .main-nav-emne4 .active:hover {
+.main-nav-emne5 nav a:hover {
+	color: var(--emne5);
+}
+
+/* hovereffekter på overemner */
+.main-nav-emne1 .active:hover, .main-nav-emne2 .active:hover, .main-nav-emne3 .active:hover, .main-nav-emne4 .active:hover, .main-nav-emne5 .active:hover {
 	color: black;
 }
+
+/* overemner */
 .main-nav-emne1 .active {
 	color: white;
 	font-size: 1.2em;
@@ -304,7 +396,7 @@ nav {
 	padding: 0.5em;
 	border-color: white;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 }
 .main-nav-emne2 .active {
 	color: white;
@@ -313,7 +405,7 @@ nav {
 	padding: 0.5em;
 	border-color: white;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 }
 .main-nav-emne3 .active {
 	color: white;
@@ -322,7 +414,7 @@ nav {
 	padding: 0.5em;
 	border-color: white;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 }
 .main-nav-emne4 .active {
 	color: white;
@@ -331,32 +423,31 @@ nav {
 	padding: 0.5em;
 	border-color: white;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 1px;
 }
-.main-nav-emne1 ul {
-	color: var(--emne1);
-	list-style: none;
+.main-nav-emne5 .active {
+	color: white;
+	font-size: 1.2em;
+	background-color: var(--emne5);
+	padding: 0.5em;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
 }
-.main-nav-emne2 ul {
-	color: var(--emne2);
-	list-style: none;
-}
-.main-nav-emne3 ul {
-	color: var(--emne3);
-	list-style: none;
-}
-.main-nav-emne4 ul {
-	color: var(--emne4);
-	list-style: none;
-}
+
+
+/* effekt på markeret emne */
 #bold {
-	font-style: bold;
-	text-decoration: underline;
+	Font-family: DinDisplayBold;
 }
+
+/* artikel */
 .main-article {
 	padding: 2em;
 	background-color: var(--main);
 }
+
+/* kartotek / genveje */
 .alle-emner {
 	background-color: var(--alle-emner);
 	padding: 1em;
@@ -376,6 +467,8 @@ nav {
 	padding-right: 2em;
 	padding-bottom: 2em;
 }
+
+/* farve på hovereffekter - kartotek / genveje */
 .alle-emner1 li a:hover {
 	color: var(--emne1);
 }
@@ -391,6 +484,8 @@ nav {
 .alle-emner5 li a:hover {
 	color: var(--emne5);
 }
+
+/* footer */
 footer {
 	background-color: var(--footer);
 	color: var(--footer-text);
@@ -398,35 +493,40 @@ footer {
 	flex-direction: column;
 	margin-top: 1em;
 	padding: 1em;
+	font-size: 1.5em;
 }
+
+/* footer - kontaktinfo */
 footer article {
 	list-style-type: none;
 	margin: auto;
 	text-align: center;
 }
+
+/* footer - some icons */
 footer aside {
 	height: auto;
 	margin-top: 3em;
 	margin: auto;
 	display: flex;
 }
+
+/* størrelse på some icons */
 footer aside a img {
 	max-width: 4em;
 	padding: 0.5em;
 }
+
+/* hovereffekt på some icons */
 footer aside a img:hover {
 	opacity: 0.5;
 }
 
 @media (min-width: 600px) {
+	
+/* kartotek / genveje - sættes i to kolloner */
 .alle-emner-container {
 	grid-template-columns: 1fr 1fr;
-}
-.boxes {
-	grid-template-columns: 1fr 1fr;
-}
-.box img {
-	display: block;
 }
 .box {
 	width: 100%;
@@ -435,11 +535,12 @@ footer {
 	flex-direction: row;
 }
 /* titles on boxes*/
-.title-emne1, .title-emne2, .title-emne3, .title-emne4 {
+.title-emne1, .title-emne2, .title-emne3, .title-emne4, .title-emne5 {
 	width: auto;
 }
 }
- @media (min-width: 1024px) {
+
+@media (min-width: 1024px) {
 /* nav */
 #nav-mobile, #logo-mobile {
 	display: none;
@@ -448,56 +549,84 @@ footer {
 	display: flex;
 	justify-content: flex-end;
 }
+/* sætter logo til venste, og de andre ikoner til højre */
 #logo-desktop {
 	flex: 5;
 }
-#mobil-menu-emne1, #mobil-menu-emne2, #mobil-menu-emne3, #mobil-menu-emne4 {
+
+/* deaktivere lokal nav ved mobilvisning */
+#mobil-menu-emne1, #mobil-menu-emne2, #mobil-menu-emne3, #mobil-menu-emne4, #mobil-menu-emne5 {
 	display: none;
-	 }
- .boxes, .boxes-index, .boxes-emne1, .boxes-emne2, .boxes-emne3, .boxes-emne4 {
- grid-template-columns: 1fr 1fr 1fr 1fr;
- margin-top: 1em;
-	 display: grid;
 }
 
-.title-emne1, .title-emne2, .title-emne3, .title-emne4 {
+/* sætter hovedemner i fire kolonner */
+.boxes, .boxes-index, .boxes-emne1, .boxes-emne2, .boxes-emne3, .boxes-emne4, .boxes-emne5 {
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	margin-top: 1em;
+	display: grid;
+}
+
+.title-emne1, .title-emne2, .title-emne3, .title-emne4, .title-emne5 {
 	margin-top: 0em;
 }
-	 .title-emne {
-		border-width: 0px; 
-	 }
+
+/* fjerner border på hovedemner */
+.title-emne {
+	border-width: 0px;
+}
+
+/* udvider wrapper */
 .wrapper {
 	width: 90%;
 }
+
+/* kartotek / genveje - sættes i 3 kolonner */
 .alle-emner-container {
 	grid-template-columns: 1fr 1fr 1fr;
 }
+
+/* hovedsektion / artikel - sætter lokal nav til venstre med en bredde på 25em */
 .main {
 	display: grid;
 	grid-template-columns: 25em auto;
 	grid-column-gap: 1em;
 }
-.main-nav-emne1, .main-nav-emne2, .main-nav-emne3, .main-nav-emne4 {
+.main-nav-emne1, .main-nav-emne2, .main-nav-emne3, .main-nav-emne4, .main-nav-emne5 {
 	grid-column: 1;
-	min-width: 15em;
 	display: block;
 }
-.main-nav-emne1 img, .main-nav-emne2 img, .main-nav-emne3 img, .main-nav-emne4 img {
+
+/* billede under lokal nav */
+.main-nav-emne1 img, .main-nav-emne2 img, .main-nav-emne3 img, .main-nav-emne4 img, .main-nav-emne5 img {
 	display: block;
 	margin-top: 1em;
 }
+
+/* hovedsektion / artikel */
 .main-article {
 	grid-column: 2;
 	padding: 2em;
 }
-.broedkrumme-emne1, .broedkrumme-emne2, .broedkrumme-emne3, .broedkrumme-emne4 {
+
+/* viser brødkrumme (som er skjult ved mobilvisning) */
+.broedkrumme-emne1, .broedkrumme-emne2, .broedkrumme-emne3, .broedkrumme-emne4, .broedkrumme-emne5 {
 	display: block;
 }
- @media (min-width: 1300px) {
-.wrapper {
- width: 80%;
+	
+	footer {
+		font-size: 1em;
+	}
+
 }
+
+@media (min-width: 1300px) {
+.wrapper {
+	width: 80%;
+	max-width: 1400px;
+}
+
+/* kartotek / genveje - sættes i 4 kolonner */
 .alle-emner-container {
- grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 }

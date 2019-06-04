@@ -2,140 +2,150 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Fagfolk - Center for Autisme</title>
+<meta name="robots" content="noindex, nofollow">
+<title>Uddannelse & Kurser - Center for Autisme</title>
 <link rel="stylesheet" href="stylesheet/stylesheet.css">
 </head>
 <body>
-<main>
-  <div class="wrapper"> <a href="index.html" id="logo-mobile">
-	  <img src="img/logo2.png" alt="logo"></a>
-    <nav id="nav-mobile"> <a href="om-os.html" class="navbutton-nyheder">Nyheder</a> 
-		<a href="kontakt.html" class="navbutton-kontakt">Om Os</a> 
-		<a href="soeg.html" class="navbutton-soeg"><img src="img/loupe.png" alt="nyheder"></a> 
-	  </nav>
-    <nav id="nav-desktop"> 
-		<a href="index.html" id="logo-desktop"><img src="img/logo2.png" alt="logo"></a> 
-		<a href="om-os.html" class="navbutton-nyheder">Nyheder</a> 
-		<a href="kontakt.html" class="navbutton-kontakt">Om Os</a> 
-		<a href="soeg.html" class="navbutton-soeg"><img src="img/loupe.png" alt="nyheder"></a> 
-	  </nav>
-    <section class="boxes-emne2"> 
-		<a href="uddannelse-og-kurser.html">
-      <h4 class="title-emne">Uddannelse & Kurser</h4>
-      </a> 
-		<a href="Fagfolk.html">
-      <h4 class="title-emne" id="active">For Fagfolk</h4>
-      </a> 
-		<a href="foraeldre-og-paaroerende.html">
-      <h4 class="title-emne">Forældre & Pårørende</h4>
-      </a> 
-		<a href="viden.html">
-      <h4 class="title-emne">Forskning</h4>
-      </a> 
+<div class="wrapper">
+  <header> <a href="index.html" id="logo-mobile"><img src="img/logo2.png" alt="logo"></a> <!-- Logo ved mobilvisning / placeres over navbar -->
+    <nav id="nav-mobile"> <!-- Navbar i mobiltilstand --> 
+      <a href="nyheder.html" class="navbutton-nyheder">Nyheder</a> 
+	  <a href="om-os.html" class="navbutton-kontakt">Om Os</a> 
+	  <a href="soeg.html" class="navbutton-soeg"><img src="img/loupe.png" alt="nyheder"></a> 
+	</nav>
+    <nav id="nav-desktop"> <!-- Navbar i desktoptilstand --> 
+      <a href="index.html" id="logo-desktop"><img src="img/logo2.png" alt="logo"></a> <!-- Logo ved desktopvisning / placeres i øverste vesntre hjørne --> 
+      <a href="nyheder.html" class="navbutton-nyheder">Nyheder</a> 
+	  <a href="om-os.html" class="navbutton-kontakt">Om Os</a> 
+	  <a href="soeg.html" class="navbutton-soeg"><img src="img/loupe.png" alt="nyheder"></a> 
+	</nav>
+    <section class="boxes-emne2"> <!-- De fire menupunkter --> 
+      <a href="uddannelse-og-kurser.html"><h4 class="title-emne" >Uddannelse & Kurser</h4></a> 
+	  <a href="Fagfolk.html"><h4 class="title-emne" id="active">For Fagfolk</h4></a> 
+	  <a href="foraeldre-og-paaroerende.html"><h4 class="title-emne">Behandlinger</h4></a> 
+		<a href="viden.html"><h4 class="title-emne">Forskning</h4></a> 
 	</section>
-    <section class="broedkrumme-emne2"> <a href="index.html">Forside</a>/ <a href="fagfolk.html">For Fagfolk</a>/ </section>
-    <section class="main">
-      <article class="main-nav-emne2">
-        <ul>
-          <li><a href="fagfolk/forskning-og-udvikling.html" class="active">Forskning og udvikling</a></li>
-          <li><a href="fagfolk/raadgivning.html" class="active">Rådgivning</a></li>
-          <li><a href="fagfolk/kurser.html" class="active">Kurser</a></li>
-          <li><a href="fagfolk/undervisning.html" class="active">Undervisning</a></li>
-		  <li><a href="fagfolk/neuropsykologisk-udredning.html" class="active">Neuropsykologisk udredning</a></li>
-        </ul>
+    <section class="broedkrumme-emne2"> <!-- Brødkrumme --> 
+      <a href="index.html">Forside</a>/ <a href="uddannelse-og-kurser.html">For Fagfolk</a>/ </section>
+  </header>
+  <main>
+    <section class="main"> <!-- Kontainer for hovedartikel og tilhørende navbar -->
+      <nav id="mobil-menu-emne2"> <!-- knap der viser/gemmer undermenupunkter og knap der går til forside --> 
+        <a id="emner">
+			<img id="burger" src="img/menu.png" alt="Menu ikon">
+			<h3>Vis alle emner</h3>
+		  </a> 
+		  <a id="forside" href="index.html"><h3>Forside</h3></a>
+	  </nav>
+      <article class="main-nav-emne2"> <!-- Vertikal navbar i venstre side -->
+        <nav> 
+			<a href="fagfolk/foskning-og-udvikling.html" class="active">Forskning og udvikling ⯆</a>
+			<a href="fagfolk/raadgivning.html" class="active">Rådgivning⯆</a> 
+			<a href="fagfolk/kurser.html" class="active">Kurser ⯆</a> 
+			<a href="fagfolk/undervisning.html" class="active">Undervisning ⯆</a> 
+			<a href="fagfolk/neuropsykologisk-udredning.html" class="active">Neuropsykologisk udredning</a> 
+			<img src="img/teamwork.jpg" alt="teamwork">  
+		</nav>
       </article>
-      <article class="main-article">
-        <h2>Ydelser</h2>
-        <p>Psykoedukation/støttesamtaler/psykologsamtaler
-          
-          Center for Autisme tilbyder Psykoedukation, støttesamtaler og psykologsamtaler til normaltbegavede børn, unge og voksne med ASF 
-          eller med en anden neuroudviklingsforstyrrelse. Formålet med samtalerne kan være at støtte den enkelte fx i forhold til personlig 
-          udvikling, uddannelse, arbejde, fritid, socialt liv, selvforståelse (herunder ressourcer og vanskeligheder) og til at håndtere dagligdagen.
-          
-          Temaer i forløbene ved psykoedukation og samtaler til typisk være:
-        <h3>Muligheder for dig</h3>
-        <br>
-        Vi koncentrerer os om at sætte det enkelte menneske i centrum. <br>
-        <br>
-        På den måde er de tre ord "Muligheder For Dig" et centralt 
-        omdrejningspunkt for vores virke. Vi skaber først og fremmest 
-        muligheder for personer med ASF. <br>
-        <br>
-        Vi skaber muligheder i vores center og muligheder i samfundet, 
-        herunder på arbejdsmarkedet, men vi koncentrerer os også om 
-        at skabe muligheder for forældre, søskende og andre pårørende 
-        til personer med autismespektrumsforstyrrelse.
-        </p>
+      <article class="main-article"> <!-- Brødtekst -->
+        <h1>Erhvervs- og uddannelsescenteret</h1>
+Erhvervs- og uddannelsescenteret udbyder en vifte af aktiviteter målrettet uddannelse og beskæftigelse til unge/voksne med en neuroudviklingsforstyrrelse i alderen fra 16 til 60 år. 
+<br><br>
+
+Erhvervs- og uddannelsescenteret har en flerfaglig personalegruppe bestående af håndværkere, pædagoger, lærere og psykologer - alle med en bred arbejdsmæssig erfaring, hvilket vi mener er værdifuldt i forhold til, at vi skal afspejle den fremtid og virkelighed, deltagerne kommer til at møde ude på virksomheder og uddannelsessteder. 
+<br><br>
+Aktiviteterne består af:
+<br>
+1. STU (ungdomsuddannelse) - Særligt Tilrettelagt Ungdomsuddannelse<br>
+
+2. Interne værksteds-, erhvervs- og uddannelsesafklarende forløb <br>
+3. Eksterne uddannelses- og erhvervsafklarende forløb på uddannelsessteder og erhvervsvirksomheder <br>
+4. Specialpædagogisk mentor/coach i forhold til uddannelse og erhverv <br>
+5. Beskyttet beskæftigelse på interne og eksterne virksomheder og værksteder § 103 og § 104 (samværs- og aktivitetsforløb) <br>
+6. Netværk - Netværksgrupper efter paragraffer i Lov om Social Service for deltagere i alderen ca. 12 år til +50. Samt §85 - Støtte i eget hjem.<br>
+
+ <br><br>
+
+Alle forløb starter med en visitationssamtale, hvorefter der udarbejdes en forløbsbeskrivelse med pris, opstartstidspunkt og indhold for det enkelte forløb. Vi tilbyder i sammenhæng med disse forløb, at man derudover kan tilkøbe udarbejdelse af en psykologisk funktionsudredning samt evt. psykoedukativt samtaleforløb med psykolog relateret til uddannelse- og arbejdsmarked.
+
+ <br><br>
+
+Centerets neuropædagogiske tilgang betyder bl.a., at alle forløb på Erhvervscenteret er individuelt tilrettelagte. De bliver, i det omfang det er muligt, sammensat ud fra deltagerens ønsker. Endvidere tages hensyn til den enkeltes udfordringer, behov og kompetencer samt de mål, deltager og kommune har for forløbet. Det overordnede mål for alle forløb er at afklare og beskrive den enkelte i forhold til erhverv og/eller uddannelse. Vi afdækker og bekriver de kompetencer, deltageren bør have/har brug for at udvikle for at kunne tage en uddannelse eller passe et arbejde. Det kan være: selvstændighed, kommunikation, kognition, motorik, sociale og emotionelle færdigheder. Derudover er fokus på at afdække og beskrive skånehensyn og støttebehov i forhold til uddannelse og arbejdsmarked. Herunder ligger der for deltagerne en række delmål såsom øget selvværd og selvtillid, tro på egen kunnen, selvstændighed, redskaber og handlemåder, der gør det muligt at kunne indgå på en uddannelse eller kunne passe et arbejde.
+
+ <br><br>
+
+Metoden er kærnebegreberne i den strukturerede pædagogik: forudsigelighed, overskuelighed, gentagelse, synliggørelse og tydeliggørelse.
       </article>
       <!-- slut på main article --> 
     </section>
     <!-- slut på main section -->
-    
-    <section class="alle-emner"> <!-- kartotek -->
-      <h4>Genveje</h4>
-      <article class="alle-emner-container">
-        <ul>
-          <h4>Job og uddannelser</h4>
-          <li><a href>Ungdomsuddannelse</a></li>
-          <li><a href>Fag og undervisning</a></li>
-          <li><a href>emne</a></li>
+    <section class="alle-emner"> <!-- Kartotek -->
+      <h4>Alle emner</h4>
+       <article class="alle-emner-container"> <!-- container for kartotek-bokse / genveje -->
+        <ul class="alle-emner1">
+          <!-- bokse -->
+          <h4>Ungdomsuddannelse (STU)</h4>
+          <li><a href="uddannelse-og-kurser/formaal.html">Formål</a></li>
+          <li><a href="uddannelse-og-kurser/fag-og-undervisning.html">Fag og undervisning</a></li>
+          <li><a href="uddannelse-og-kurser/visitation-og-optagelse.html">Visitation og optagelse</a></li>
         </ul>
-        <ul>
-          <h4>Job og uddannelser</h4>
-          <li><a href>Ungdomsuddannelse</a></li>
-          <li><a href>Fag og undervisning</a></li>
-          <li><a href>emne</a></li>
+        <ul class="alle-emner2">
+          <h4>Rådgivning for fagfolk</h4>
+          <li><a href>Psykoedukation og støttesamtaler</a></li>
+          <li><a href>Rådgivning og supervision til fagfolk</a></li>
+          <li><a href>Seksualrådgivning</a></li>
         </ul>
-        <ul>
-          <h4>Job og uddannelser</h4>
-          <li><a href>Ungdomsuddannelse</a></li>
-          <li><a href>Fag og undervisning</a></li>
-          <li><a href>emne</a></li>
+        <ul class="alle-emner3">
+          <h4>Udredning</h4>
+          <li><a href>Diagnostisk udredning og afklaring</a></li>
+          <li><a href>Psykologisk funktionsudredning</a></li>
+          <li><a href>Udredning af sprog og kommunikation</a></li>
         </ul>
-		<ul>
-          <h4>Job og uddannelser</h4>
-          <li><a href>Ungdomsuddannelse</a></li>
-          <li><a href>Fag og undervisning</a></li>
-          <li><a href>emne</a></li>
+        <ul class="alle-emner1">
+          <h4>Beskyttet beskæftigelse</h4>
+          <li><a href>Grafiske- og kreative værksted</a></li>
+          <li><a href>Intern arbejdsevneafklaring</a></li>
+          <li><a href>Ekstern arbejdsevneafklaring</a></li>
         </ul>
-		<ul>
-          <h4>Job og uddannelser</h4>
-          <li><a href>Ungdomsuddannelse</a></li>
-          <li><a href>Fag og undervisning</a></li>
-          <li><a href>emne</a></li>
+        <ul class="alle-emner2">
+          <h4>Forskning og udvikling</h4>
+          <li><a href>Specifikke målområder</a></li>
+          <li><a href>Igangværende projekter</a></li>
+          <li><a href>Afsluttede projekter</a></li>
         </ul>
-		<ul>
-          <h4>Job og uddannelser</h4>
-          <li><a href>Ungdomsuddannelse</a></li>
-          <li><a href>Fag og undervisning</a></li>
-          <li><a href>emne</a></li>
-        </ul><ul>
-          <h4>Job og uddannelser</h4>
-          <li><a href>Ungdomsuddannelse</a></li>
-          <li><a href>Fag og undervisning</a></li>
-          <li><a href>emne</a></li>
+		<ul class="alle-emner3">
+          <h4>Rådgivning for forældre og pårørende</h4>
+          <li><a href>Forældrerådgivning</a></li>
+          <li><a href>Telefonrådgivning</a></li>
+          <li><a href>Mere end bare hjemmevejledning</a></li>
+        </ul>
+        <ul class="alle-emner5">
+          <h4>Om os</h4>
+          <li><a href>Kontakt</a></li>
+          <li><a href>Kom og besøg os</a></li>
+          <li><a href>Om Center for Autisme</a></li>
         </ul>
       </article>
     </section>
-    <!-- slut på kartotek -->
-    
-    <footer>
-      <article>
-        <h3>Center for Autisme</h3>
-        <p>Herlev Hovedgade 199</p>
-        <p>2730 Herlev</p>
-        <p>Tlf.: +45 44 98 23 55</p>
-        <p>Fax: +45 44 98 23 53</p>
-        <p>CVR-nr: 17 19 55 49</p>
-      </article>
-      <aside> <!-- SoMe ikoner --> 
-        <a href="https://www.facebook.com/CenterForAutisme/" target="_blank"><img src="img/facebook.png" alt="some"></a> 
-		  <a href="https://www.linkedin.com/company/center-for-autisme/" target="_blank"> <img src="img/linkedin.png" alt="some"></a> 
-		  <a href="https://www.instagram.com/"> <img src="img/instagram.png" alt="some"></a> 
-		</aside>
-    </footer>
-  </div>
-  <!-- slut på wrapper --> 
-</main>
+    <!-- Slut på kartotek --> 
+  </main>
+  <footer> <!-- Footer -->
+    <article> <!-- Kontakt info -->
+      <h3>Center for Autisme</h3>
+      <p>Herlev Hovedgade 199</p>
+      <p>2730 Herlev</p>
+      <p>Tlf.: +45 44 98 23 55</p>
+      <p>Fax: +45 44 98 23 53</p>
+      <p>CVR-nr: 17 19 55 49</p>
+    </article>
+    <aside> <!-- SoMe ikoner --> 
+      <a href="https://www.facebook.com/CenterForAutisme/" target="_blank"><img src="img/facebook.png" alt="some"></a> <a href="https://www.linkedin.com/company/center-for-autisme/" target="_blank"><img src="img/linkedin.png" alt="some"></a> <a href="https://www.instagram.com/"><img src="img/instagram.png" alt="some"></a> </aside>
+  </footer>
+</div>
+<!-- Slut på wrapper --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> <!-- Mobil main nav -->
+<script>window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>');</script> 
+<script src="js/main.js"></script>
 </body>
 </html>
